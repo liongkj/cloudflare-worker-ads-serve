@@ -26,10 +26,6 @@ async function handleRequest(request) {
       imageUrl:
         'https://res.cloudinary.com/jomn9-com/image/upload/v1578318038/ads/ad2_j6fpt4.jpg',
     }),
-    new AdModel({
-      imageUrl:
-        'https://res.cloudinary.com/jomn9-com/image/upload/v1578318038/ads/ad2_j6fpt4.jpg',
-    }),
   )
 
   return new Response(JSON.stringify(adsList), init)
