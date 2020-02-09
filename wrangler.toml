@@ -1,0 +1,6 @@
+name = "jomn9-ads"
+type = "javascript"
+workers_dev = true
+route = ""
+zone_id = "bcab8025fa4de3dc0f3cb11273d536e9"
+account_id = "437567c8b642633db456506c141626ca"
