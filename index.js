@@ -27,7 +27,7 @@ async function handleRequest(request) {
         'https://res.cloudinary.com/jomn9-com/image/upload/v1578318038/ads/ad2_j6fpt4.jpg',
     }),
   )
-  var res = new ResponseModel(adsList)
+  var res = new ResponseModel(new Data(adsList))
 
   return new Response(JSON.stringify(res, null, 2), init)
 }
@@ -36,6 +36,11 @@ addEventListener('fetch', event => {
 })
 
 class ResponseModel {
+  constructor(data) {
+    this.data = data
+  }
+}
+class Data {
   constructor(data) {
     this.data = data
   }
