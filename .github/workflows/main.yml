@@ -1,13 +1,18 @@
-name: Build site
+name: Deploy to Workers
 
-on: push
- 
+on:
+  push
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: cloudflare/wrangler-action@1.1.0
-      with: 
-        apiKey: 6BXfv3BNG4-w14MXF_kpINxI-l5_gOeW84UdRxx2  
-    - name: Build Workers script
-      run: wrangler publish
+      - uses: actions/checkout@master
+
+      
+      - name: Install Wrangler
+        run: sudo npm i @cloudflare/wrangler -g
+
+      - name: config wrangler
+        run: CF_API_TOKEN=6BXfv3BNG4-w14MXF_kpINxI-l5_gOeW84UdRxx2 wrangler publish 
