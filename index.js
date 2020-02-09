@@ -37,7 +37,7 @@ addEventListener('fetch', event => {
 
 class ResponseModel {
   constructor(data) {
-    this.Data = data
+    this.data = data
   }
 }
 class AdModel {
