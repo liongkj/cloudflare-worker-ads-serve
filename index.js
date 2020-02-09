@@ -27,7 +27,7 @@ async function handleRequest(request) {
         'https://res.cloudinary.com/jomn9-com/image/upload/v1578318038/ads/ad2_j6fpt4.jpg',
     }),
   )
-  res.data = adsList
+  var res = new res(adsList)
 
   return new Response(JSON.stringify(res), init)
 }
