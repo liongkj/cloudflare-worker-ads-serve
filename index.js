@@ -27,13 +27,19 @@ async function handleRequest(request) {
         'https://res.cloudinary.com/jomn9-com/image/upload/v1578318038/ads/ad2_j6fpt4.jpg',
     }),
   )
+  res.data = adsList
 
-  return new Response(JSON.stringify(adsList), init)
+  return new Response(JSON.stringify(res), init)
 }
 addEventListener('fetch', event => {
   return event.respondWith(handleRequest(event.request))
 })
 
+class res {
+  constructor(data) {
+    this.Data = data
+  }
+}
 class AdModel {
   constructor({
     imageUrl,
