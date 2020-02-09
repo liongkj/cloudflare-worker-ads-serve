@@ -29,7 +29,7 @@ async function handleRequest(request) {
   )
   var res = new ResponseModel(adsList)
 
-  return new Response(JSON.stringify(res), init)
+  return new Response(JSON.stringify(res, null, 2), init)
 }
 addEventListener('fetch', event => {
   return event.respondWith(handleRequest(event.request))
