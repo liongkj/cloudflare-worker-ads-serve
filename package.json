@@ -11,6 +11,6 @@
   "author": "liongkj <fantasticbabii@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^2.0.2"
   }
 }
