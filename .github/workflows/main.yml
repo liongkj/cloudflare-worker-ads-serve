@@ -1,7 +1,6 @@
 name: Deploy to Workers
 
-on:
-  push
+on: push
 
 jobs:
   build:
@@ -9,10 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-
-      
-      - name: Install Wrangler
-        run: sudo npm i @cloudflare/wrangler -g
-
-      - name: config wrangler
-        run: CF_API_TOKEN=6BXfv3BNG4-w14MXF_kpINxI-l5_gOeW84UdRxx2 wrangler publish 
+      - name: publish
+        uses: cloudflare/wrangler-action@1.1.0
+          with:
+            apiToken: ${{ secrets.CF_API_TOKEN }}
