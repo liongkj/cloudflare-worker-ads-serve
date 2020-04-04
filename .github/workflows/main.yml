@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@master
       - name: publish
         uses: cloudflare/wrangler-action@1.1.0
-          with:
-            apiToken: ${{ secrets.CF_API_TOKEN }}
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
